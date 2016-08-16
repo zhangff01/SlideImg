@@ -1,0 +1,78 @@
+//       name--SlideImg
+//       user--zhangff01
+//    version--v0.0.1
+//       time--2016.08
+//description--a test plug-ins for sliding image
+	*{
+  		margin: 0px auto;
+  		padding: 0px;
+  	}
+  	a{
+  		text-decoration: none;
+  		color:#fff;
+  	}
+    ul li{
+    	list-style: none;
+    }
+    .slider{
+    	position: relative;
+    	margin: 0 auto;
+    	cursor: pointer;
+    }
+    .slider-body{
+    	overflow: hidden;
+    	position: relative;
+    }
+	.slider-main li{
+		float: left;
+		display: list-item;
+	}
+	.slider-main li a{
+		color: #666;
+		text-decoration: none;
+	}
+	.slider-nav{
+		position: absolute;
+		width:100%;
+		bottom: 10px;
+		text-align: center;
+	}
+	.nav_ul{
+		position: relative;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+	.nav_li{
+		display: inline-block;
+		border-radius: 50%;
+		width: 9px;
+		height: 9px;
+		text-align: center;
+		background: #3e3e3e;
+		margin-left: 8px;
+	}
+	.active{
+		background:#b61d1d;
+	}
+	.close{
+		background: #3e3e3e;
+	}
+	.slider-page a{
+		position: absolute;
+    	top: 50%;
+    	margin-top: -31px;
+    	z-index: 1;
+    	display: block;
+    	width: 28px;
+    	height: 62px;
+    	line-height: 62px;
+    	background: rgba(0,0,0,.2);
+    	text-align: center;
+    	font-size: 22px;
+	}
+	.slider-prev{
+		left:0px;
+	}
+	.slider-next{
+		right:0px;
+	}
