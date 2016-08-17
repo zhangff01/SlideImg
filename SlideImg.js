@@ -5,6 +5,7 @@
 //description--a test plug-ins for sliding image
 ;(function(Window,jQuery,document,undefined){
 	"use strict";
+	
 	var Settings;
 	if(!Settings){
 		Settings={
@@ -38,7 +39,8 @@
 			var _height=options.height+"px";
 			var sum=0;
 			var html=[];
-			html.push('<div class="slider" style="width:'+_width+';height:'+_height+'"><div class="slider-body"><ul class="slider-main">');
+			html.push('<div class="slider" style="width:'+_width+';height:'+_height+'">');
+			html.push('<div class="slider-body"><ul class="slider-main">');
 			$.each(options.jsondata.ImgObj,function(i,obj){
 				if(i==0){
 					html.push('<li><a href="'+obj.alink+'">');
@@ -48,7 +50,8 @@
 				html.push('<img src="'+obj.imgurl+'" height='+_height+' width='+_width+' /></a></li>');
 				sum++;
 			});
-			html.push('</ul></div><div class="slider-nav"><ul class="nav_ul">');
+			html.push('</ul></div>');
+			html.push('<div class="slider-nav"><ul class="nav_ul">');
 			$.each(options.jsondata.ImgObj,function(i,obj){
 				if(i==0){
 					html.push('<li class="active nav_li"></li>');
@@ -57,7 +60,8 @@
 				}
 				
 			});
-			html.push('</ul></div><div class="slider-page" style="display:none;">');
+			html.push('</ul></div>');
+			html.push('<div class="slider-page" style="display:none;">');
 			html.push('<a href="javascript:void(0)" class="slider-prev">&lt;</a>');
 			html.push('<a href="javascript:void(0)" class="slider-next">&gt;</a>');
 			html.push('</div></div>');
