@@ -11,6 +11,7 @@
 			width:400,
 			height:300,
 			num:0,
+			interval:4000,
 			jsondata:{
 				"ImgObj":[{"imgurl":"image/z1.jpg","alink":"http://www.tianlian.com"},
 				{"imgurl":"image/z2.jpg","alink":"http://www.tianlian.cn"},
@@ -20,7 +21,7 @@
 	}
 	function SlideImg(element,options){
 		this._element=element;
-		this.options=options||Settings;
+		this.options=$.extend({},Settings,options||Settings);
 		this.init();
 	}
 	SlideImg.prototype={
@@ -28,7 +29,7 @@
 		init:function(){
 			this.renderHtml();
 			this.bindEvent();
-			setInterval(this.autoclick,4000);
+			setInterval(this.autoclick,this.options.interval);
 		},
 		renderHtml:function(){
 			var _this=this;
